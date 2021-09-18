@@ -1,21 +1,44 @@
+$text-color: #333341;
+$background-color: #E5e5e5;
+$sserif: 'Questrial', sans-serif;
+$serif: 'Lustria', serif;
+
+$screen-sm-min: 576px;
+
+
+@mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+
 *{
     padding:0;
     margin:0;
     font-weight: 400;
-    font-family: 'Questrial', sans-serif;
+    font-family: $sserif;
     font-size:16px;
 }
 h1{
-    font-family: 'Lustria', serif;
+    font-family: $serif;
     font-size:64px;
+    @include sm{
+        font-size: 36px;
+    }
 }
 h2{
     font-size:36px;
-    font-family: 'Lustria', serif;
+    font-family: $serif;
+    @include sm{
+        font-size: 24px;
+    }
 }
 h3{ 
     font-size:24px;
-    font-family: 'Lustria', serif;
+    font-family: $serif;
+    @include sm{
+        font-size:20px;
+    }
 }
 ul{
     list-style-type: none;
@@ -24,6 +47,9 @@ ul{
     align-items: flex-start;
     li{
         margin:0 45px;
+        @include sm{
+            margin: 0 25px;
+        }
     }
 }
 a{
@@ -34,11 +60,20 @@ a{
         opacity:50%;
     }
 }
+.ru-ss{
+    font-family: 'Montserrat', sans-serif;
+}
+.ru-s{
+    font-family: 'El Messiri', serif;
+}
 .container{
     height: 1024px;
     width:auto;
     max-width: 1920px;
     background-color: #eee;
+    @include sm{
+        height: 526px;
+    }
 }
 button{
     width:fit-content;
@@ -74,11 +109,14 @@ button.secondary{
     align-items: flex-start;
     padding: 0px;
     :first-child{
-        margin-right: 35px;
+        margin-right: 15px;
     }
 }
 .box{
     padding:0 15%;
+    @include sm{
+        padding:0 20px;
+    }
 }
 .underlined{
     text-decoration: underline;
@@ -89,6 +127,7 @@ button.secondary{
     background-size: cover;
     color:white;
     padding-top:45px;
+    height:1024px;
     .box{
         .headertext{
             margin-top:300px;
@@ -120,6 +159,10 @@ button.secondary{
         height: fit-content;
         opacity:50%;
         transform: rotate(90deg);
+        @include sm{
+            top: 65%;
+            right: -130px;
+        }
     }
 }
 .container:nth-of-type(2){
@@ -132,6 +175,9 @@ button.secondary{
         padding: 0px;
         position:relative;
         top:-75px;
+        @include sm{
+            height: 15rem;
+        }
     }
     .imagebox:first-of-type{
         background-image: url(rectangle-16@1x.svg);
@@ -157,6 +203,9 @@ button.secondary{
         width:100%;
         position:relative;
         top:-350px;
+        @include sm{
+            top:-250px;
+        }
         button{
             margin-top:25px;
             &:hover{
@@ -190,6 +239,9 @@ button.secondary{
     background-color: #181A1D;
     color:#fff;
     height:1750px;
+    @include sm{
+        height: fit-content;
+    }
 
     .projectgroup{
         display: flex;
@@ -200,6 +252,13 @@ button.secondary{
         margin-bottom:150px;
         position: relative;
         top:-100px;
+        @include sm{
+            flex-direction: column;
+            //align-items:center;
+            &:last-of-type{
+                margin-bottom: 20px;
+            }
+        }
 
         .projectitem:first-child{
             position: relative;
@@ -214,6 +273,10 @@ button.secondary{
             .imagebox{
                 width:100%;
                 height: 613px;
+                @include sm{
+                    height: 500px;
+                    align-self: center;
+                }
                 background-size: cover;
                 transition: 600ms;
                 cursor: pointer;
@@ -244,6 +307,10 @@ button.secondary{
 }
 footer{
     height:250px;
+    @include sm{
+        height: fit-content;
+        padding:30px;
+    }
     .box{
         height:100%;
     }
@@ -266,11 +333,19 @@ footer{
             justify-content: center;
             align-items: center;
             padding: 0px;
+            @include sm{
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
             li{
                 margin:0;
             }
             ul{
                 margin-left:65px;
+                @include sm{
+                    margin: 10px 0 0 0;
+                }
             }            
             a{
                 margin-right: 25px;
@@ -279,3 +354,5 @@ footer{
     }
 
 }
+
+ 

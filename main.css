@@ -2,23 +2,41 @@
   padding: 0;
   margin: 0;
   font-weight: 400;
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
   font-size: 16px;
 }
 
 h1 {
-  font-family: 'Lustria', serif;
+  font-family: "Lustria", serif;
   font-size: 64px;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 36px;
+  }
 }
 
 h2 {
   font-size: 36px;
-  font-family: 'Lustria', serif;
+  font-family: "Lustria", serif;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 24px;
+  }
 }
 
 h3 {
   font-size: 24px;
-  font-family: 'Lustria', serif;
+  font-family: "Lustria", serif;
+}
+
+@media (max-width: 576px) {
+  h3 {
+    font-size: 20px;
+  }
 }
 
 ul {
@@ -39,6 +57,12 @@ ul li {
   margin: 0 45px;
 }
 
+@media (max-width: 576px) {
+  ul li {
+    margin: 0 25px;
+  }
+}
+
 a {
   color: white;
   -webkit-transition: opacity 300ms;
@@ -50,11 +74,25 @@ a:hover {
   opacity: 50%;
 }
 
+.ru-ss {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ru-s {
+  font-family: 'El Messiri', serif;
+}
+
 .container {
   height: 1024px;
   width: auto;
   max-width: 1920px;
   background-color: #eee;
+}
+
+@media (max-width: 576px) {
+  .container {
+    height: 526px;
+  }
 }
 
 button {
@@ -118,11 +156,17 @@ button.secondary:hover {
 }
 
 .buttongroup :first-child {
-  margin-right: 35px;
+  margin-right: 15px;
 }
 
 .box {
   padding: 0 15%;
+}
+
+@media (max-width: 576px) {
+  .box {
+    padding: 0 20px;
+  }
 }
 
 .underlined {
@@ -135,6 +179,7 @@ button.secondary:hover {
   background-size: cover;
   color: white;
   padding-top: 45px;
+  height: 1024px;
 }
 
 .container:first-of-type .box .headertext {
@@ -190,6 +235,13 @@ button.secondary:hover {
           transform: rotate(90deg);
 }
 
+@media (max-width: 576px) {
+  .container:first-of-type .sociallinks {
+    top: 65%;
+    right: -130px;
+  }
+}
+
 .container:nth-of-type(2) .imagegroup {
   width: 100%;
   height: 40rem;
@@ -206,6 +258,12 @@ button.secondary:hover {
   padding: 0px;
   position: relative;
   top: -75px;
+}
+
+@media (max-width: 576px) {
+  .container:nth-of-type(2) .imagegroup {
+    height: 15rem;
+  }
 }
 
 .container:nth-of-type(2) .imagebox:first-of-type {
@@ -244,6 +302,12 @@ button.secondary:hover {
   width: 100%;
   position: relative;
   top: -350px;
+}
+
+@media (max-width: 576px) {
+  .container:nth-of-type(2) .textgroup {
+    top: -250px;
+  }
 }
 
 .container:nth-of-type(2) .textgroup button {
@@ -286,6 +350,14 @@ button.secondary:hover {
   height: 1750px;
 }
 
+@media (max-width: 576px) {
+  .container:last-of-type {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
 .container:last-of-type .projectgroup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,6 +374,18 @@ button.secondary:hover {
   margin-bottom: 150px;
   position: relative;
   top: -100px;
+}
+
+@media (max-width: 576px) {
+  .container:last-of-type .projectgroup {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container:last-of-type .projectgroup:last-of-type {
+    margin-bottom: 20px;
+  }
 }
 
 .container:last-of-type .projectgroup .projectitem:first-child {
@@ -324,6 +408,15 @@ button.secondary:hover {
   -webkit-transition: 600ms;
   transition: 600ms;
   cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .container:last-of-type .projectgroup .projectitem .imagebox {
+    height: 500px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .container:last-of-type .projectgroup .projectitem .imagebox:hover {
@@ -363,6 +456,15 @@ button.secondary:hover {
 
 footer {
   height: 250px;
+}
+
+@media (max-width: 576px) {
+  footer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 30px;
+  }
 }
 
 footer .box {
@@ -412,12 +514,33 @@ footer .groupbox .textbox {
   padding: 0px;
 }
 
+@media (max-width: 576px) {
+  footer .groupbox .textbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 footer .groupbox .textbox li {
   margin: 0;
 }
 
 footer .groupbox .textbox ul {
   margin-left: 65px;
+}
+
+@media (max-width: 576px) {
+  footer .groupbox .textbox ul {
+    margin: 10px 0 0 0;
+  }
 }
 
 footer .groupbox .textbox a {
